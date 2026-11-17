@@ -1,0 +1,13 @@
+{
+  "files.watcherExclude": {
+    "**/out/**": true,
+    "**/release/**": true,
+    "**/dist/**": true,
+    "**/test-results/**": true
+  },
+  "search.exclude": {
+    "**/out": true,
+    "**/release": true,
+    "**/dist": true
+  }
+}

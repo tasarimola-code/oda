@@ -1,0 +1,26 @@
+[Unit]
+Description=ODA media server (LiveKit)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=oda
+Group=oda
+ExecStart=/opt/oda/livekit/livekit-server --config /etc/oda/livekit.yaml
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65536
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target

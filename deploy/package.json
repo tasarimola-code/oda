@@ -1,0 +1,8 @@
+{
+  "name": "oda-server-runtime",
+  "private": true,
+  "description": "Runtime dependencies of dist/server/oda-server.cjs (everything else is bundled).",
+  "dependencies": {
+    "better-sqlite3": "13.0.3"
+  }
+}

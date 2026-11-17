@@ -1,0 +1,16 @@
+node_modules/
+dist/
+out/
+release/
+test-results/
+*.log
+*.odabak
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store
+Thumbs.db

@@ -1,0 +1,28 @@
+[Unit]
+Description=ODA community server
+After=network-online.target oda-livekit.service
+Wants=network-online.target oda-livekit.service
+
+[Service]
+User=oda
+Group=oda
+Environment=ODA_DATA=/var/lib/oda
+ExecStart=/opt/oda/node/bin/node /opt/oda/app/oda-server.cjs run
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65536
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/oda
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target
